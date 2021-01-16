@@ -6,6 +6,7 @@ html,
 body {
   width: 100vw;
   font-family: "Lato", sans-serif;
+  font-size: 14px;
 }
 
 header,
@@ -27,10 +28,6 @@ footer {
 header h1 {
   font-size: 1.5rem;
   margin: 20px;
-}
-
-main h2 {
-  max-width: 50%;
 }
 
 hr {
