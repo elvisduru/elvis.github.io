@@ -71,6 +71,10 @@ nav ul li a {
   text-align: center;
 }
 
+nav ul li:hover {
+  background-color: #0083ca;
+}
+
 nav ul li.active {
   background-color: #0077b6;
 }
