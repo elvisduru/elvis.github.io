@@ -3,7 +3,7 @@
   header,
   nav,
   main,
-  footer {
+  footer #contact {
     /* max-width: 64rem; */
     padding-left: 20%;
     padding-right: 20%;
