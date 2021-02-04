@@ -4,7 +4,8 @@
   nav,
   main,
   footer {
-    max-width: 64rem;
-    margin: auto;
+    /* max-width: 64rem; */
+    padding-left: 20%;
+    padding-right: 20%;
   }
 } /* end of media query */

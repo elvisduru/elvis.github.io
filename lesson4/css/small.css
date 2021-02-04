@@ -66,6 +66,7 @@ header h2 {
   max-height: 0;
   opacity: 0;
   transition: all 0.2s ease-in-out;
+  background-color: #00b4d8;
 }
 
 #menu ul {
@@ -76,7 +77,6 @@ header h2 {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #00b4d8;
 }
 
 #menu ul li {
@@ -182,7 +182,7 @@ footer {
 }
 
 footer div img {
-  max-width: 24px;
+  max-width: 40px;
   margin-right: 10px;
 }
 
