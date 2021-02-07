@@ -33,8 +33,7 @@
 
   #menu ul li {
     flex-grow: 0;
-    padding: 0 1.2rem;0
-    .
+    padding: 0 1.2rem;
   }
 
   /*----------- MAIN --------------*/
@@ -54,7 +53,7 @@
   #article {
     display: block;
   }
- 
+
   #article img {
     float: right;
     min-width: 0;
@@ -79,7 +78,6 @@
 
   #contact > div > div {
     display: flex;
-    
   }
 
   #contact > div > div > div {
@@ -90,5 +88,4 @@
   footer > p {
     flex-direction: row;
   }
-  
 } /* end of media query */
