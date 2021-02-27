@@ -1,3 +1,14 @@
+// Webfont Loader
+WebFont.load({
+  google: {
+    families: [
+       'Lato'
+    ]
+  }
+});
+
+
+
 // Select elements from DOM
 const currentYearEl = document.querySelector("#currentYear");
 const lastUpdatedEl = document.querySelector("#lastUpdated span");
