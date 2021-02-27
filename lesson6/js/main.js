@@ -1,3 +1,10 @@
+// Webfont Loader
+WebFont.load({
+  google: {
+    families: ["Inter"],
+  },
+});
+
 // Get Current Date for Footer
 const currentDateSpan = document.querySelector("#currentDate");
 
