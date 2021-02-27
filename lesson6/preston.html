@@ -56,7 +56,22 @@
     <main>
       <h1>Preston Idaho</h1>
       <section id="summary">
-        <img src="images/hero.jpg" alt="" />
+        <!-- <img src="images/hero.jpg" alt="" /> -->
+        <picture>
+          <source
+            media="(max-width: 320px)"
+            srcset="images/franklin_small.jpg"
+          />
+          <source
+            media="(max-width: 640px)"
+            srcset="images/franklin_medium.jpg"
+          />
+          <source
+            media="(max-width: 1024px)"
+            srcset="images/franklin_large.jpg"
+          />
+          <img src="images/franklin_large.jpg" alt="Franklin" />
+        </picture>
         <table>
           <thead>
             <tr>
@@ -70,17 +85,11 @@
             </tr>
             <tr>
               <td>High:</td>
-              <td>
-                35<sup><sup>o</sup></sup
-                >C
-              </td>
+              <td><span id="temp">44</span>&deg;F</td>
             </tr>
             <tr>
               <td>Wind Chill:</td>
-              <td>
-                3<sup><sup>o</sup></sup
-                >C
-              </td>
+              <td><span id="windchill">N/A</span></td>
             </tr>
             <tr>
               <td>Humidity:</td>
@@ -88,7 +97,7 @@
             </tr>
             <tr>
               <td>Wind Speed:</td>
-              <td>3mph%</td>
+              <td><span id="windspeed">12</span>mph</td>
             </tr>
           </tbody>
         </table>
@@ -221,5 +230,6 @@
       </section>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/windchill.js"></script>
   </body>
 </html>
