@@ -1,11 +1,12 @@
 body {
   font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 table {
   margin: 0 auto;
   border-collapse: collapse;
+  box-shadow: 0.5em 0.5em 1em #628ca6;
 }
 
 thead,
