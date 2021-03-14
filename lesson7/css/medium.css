@@ -60,6 +60,17 @@
     max-width: 30ex;
   }
 
+  /* Weather Summary */
+
+  #summary > table {
+    width: 30ex;
+    padding: 2%;
+    position: absolute;
+    top: 10%;
+    left: 4%;
+  }
+
+
   /*----------- FOOTER --------------*/
   #contact {
     flex-direction: row;
