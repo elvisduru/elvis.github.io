@@ -187,7 +187,7 @@ section:not(#contact) {
 }
 
 .forecast-item {
-  border: 1px solid #0083ca;
+  border: 1px solid #0083ca15;
   text-align: center;
 }
 
@@ -199,16 +199,17 @@ section:not(#contact) {
   background-color: #00b4d8;
   padding: 10px;
   margin: 0;
-  margin-bottom: 15px;
   color: #000000;
 }
 
 .forecast-item img {
-  width: 50px;
+  /* width: 50px; */
+  filter: drop-shadow(0.25em 0.25em 0.5em rgba(0, 0, 0, 0.25));
 }
 
 .forecast-item p {
-  font-size: 0.85rem;
+  margin-top: 0;
+  font-weight: bold;
 }
 
 /* Article Section */

@@ -76,7 +76,7 @@ fetch(currentWeatherApiURL)
         dayName.textContent = weekday[forecastDayNumber];
 
         const iconPath =
-          "//openweathermap.org/img/w/" + weather.weather[0].icon + ".png";
+          "//openweathermap.org/img/wn/" + weather.weather[0].icon + "@2x.png";
         const icon = document.createElement("img");
         icon.src = iconPath;
         icon.alt = weather.weather[0].description;
