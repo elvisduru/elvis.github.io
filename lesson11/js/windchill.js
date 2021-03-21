@@ -19,76 +19,112 @@ function calculateWindchill(temp, windspeed) {
   }
 }
 
-// Get Current Weather
-const currentWeatherApiURL =
-  "//api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&appid=11f9be110b488889077df997d7a7dcfc";
-const forecastApiUrl =
-  "//api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=11f9be110b488889077df997d7a7dcfc";
+const path = location.pathname.substring(1);
 
-fetch(currentWeatherApiURL)
-  .then((response) => response.json())
-  .then((jsonObject) => {
-    const temp = jsonObject.main.temp;
-    const windspeed = jsonObject.wind.speed;
+const cities = new Map();
+cities.set("preston", "5604473");
+cities.set("sodasprings", "5607916");
+cities.set("fishhaven", "5585010");
 
-    document.getElementById("desc").textContent =
-      jsonObject.weather[0].description;
-    document.getElementById("temp").textContent = jsonObject.main.temp_max;
+function getPageData(city) {
+  const cityID = cities.get(city);
+  const currentWeatherApiURL = `//api.openweathermap.org/data/2.5/weather?id=${cityID}&units=imperial&appid=11f9be110b488889077df997d7a7dcfc`;
+  const forecastApiUrl = `//api.openweathermap.org/data/2.5/forecast?id=${cityID}&units=imperial&appid=11f9be110b488889077df997d7a7dcfc`;
 
-    document.getElementById("humidity").textContent = jsonObject.main.humidity;
-    document.getElementById("windspeed").textContent = windspeed;
+  const townDataURL =
+    "https://byui-cit230.github.io/weather/data/towndata.json";
 
-    // calculate windchill
-    calculateWindchill(temp, windspeed);
+  // Get Current Weather
+  fetch(currentWeatherApiURL)
+    .then((response) => response.json())
+    .then((jsonObject) => {
+      const temp = jsonObject.main.temp;
+      const windspeed = jsonObject.wind.speed;
 
-    return fetch(forecastApiUrl);
-  })
-  .then((response) => response.json())
-  .then((jsonObject) => {
-    const d = new Date();
+      document.getElementById("desc").textContent =
+        jsonObject.weather[0].description;
+      document.getElementById("temp").textContent = jsonObject.main.temp_max;
 
-    const todayDayNumber = d.getDay();
+      document.getElementById("humidity").textContent =
+        jsonObject.main.humidity;
+      document.getElementById("windspeed").textContent = windspeed;
 
-    const weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
+      // calculate windchill
+      calculateWindchill(temp, windspeed);
 
-    console.log(jsonObject.city.name);
-    const weatherList = jsonObject.list;
-    let forecastDayNumber = todayDayNumber;
+      // Fetch 5 Day Forecast
+      return fetch(forecastApiUrl);
+    })
+    .then((response) => response.json())
+    .then((jsonObject) => {
+      const d = new Date();
 
-    weatherList.forEach((weather) => {
-      let time = weather.dt_txt;
-      // Get forecasts at 18:00:00
-      if (time.includes("18:00:00")) {
-        forecastDayNumber += 1;
-        if (forecastDayNumber === 7) {
-          forecastDayNumber = 0;
+      const todayDayNumber = d.getDay();
+
+      const weekday = new Array(7);
+      weekday[0] = "Sunday";
+      weekday[1] = "Monday";
+      weekday[2] = "Tuesday";
+      weekday[3] = "Wednesday";
+      weekday[4] = "Thursday";
+      weekday[5] = "Friday";
+      weekday[6] = "Saturday";
+
+      const weatherList = jsonObject.list;
+      let forecastDayNumber = todayDayNumber;
+
+      weatherList.forEach((weather) => {
+        let time = weather.dt_txt;
+        // Get forecasts at 18:00:00
+        if (time.includes("18:00:00")) {
+          forecastDayNumber += 1;
+          if (forecastDayNumber === 7) {
+            forecastDayNumber = 0;
+          }
+          const forecastItem = document.createElement("div");
+          forecastItem.classList = "forecast-item";
+          const dayName = document.createElement("h4");
+          dayName.textContent = weekday[forecastDayNumber];
+
+          const iconPath =
+            "//openweathermap.org/img/wn/" +
+            weather.weather[0].icon +
+            "@2x.png";
+          const icon = document.createElement("img");
+          icon.src = iconPath;
+          icon.alt = weather.weather[0].description;
+
+          const temp = document.createElement("p");
+          temp.textContent = weather.main.temp + "\xB0F";
+
+          forecastItem.appendChild(dayName);
+          forecastItem.appendChild(icon);
+          forecastItem.appendChild(temp);
+
+          document.querySelector(".forecast-box").appendChild(forecastItem);
         }
-        const forecastItem = document.createElement("div");
-        forecastItem.classList = "forecast-item";
-        const dayName = document.createElement("h4");
-        dayName.textContent = weekday[forecastDayNumber];
+      });
 
-        const iconPath =
-          "//openweathermap.org/img/wn/" + weather.weather[0].icon + "@2x.png";
-        const icon = document.createElement("img");
-        icon.src = iconPath;
-        icon.alt = weather.weather[0].description;
+      // Fetch Town Data
+      return fetch(townDataURL);
+    })
+    .then((response) => response.json())
+    .then((jsonObject) => {
+      const towns = jsonObject["towns"];
 
-        const temp = document.createElement("p");
-        temp.textContent = weather.main.temp + "\xB0F";
-
-        forecastItem.appendChild(dayName);
-        forecastItem.appendChild(icon);
-        forecastItem.appendChild(temp);
-
-        document.querySelector(".forecast-box").appendChild(forecastItem);
-      }
+      // Fetch events based on page url
+      const events = towns.find((town) =>
+        path.includes(town.name.split(" ")[0].toLowerCase())
+      ).events;
+      events.forEach((event) => {
+        const p = document.createElement("p");
+        p.textContent = event;
+        document.getElementById("events").appendChild(p);
+      });
     });
-  });
+}
+
+const currentCity = Array.from(cities.keys()).find((city) =>
+  path.includes(city)
+);
+getPageData(currentCity);

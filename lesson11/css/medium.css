@@ -76,13 +76,6 @@
     justify-content: space-between;
   }
 
-  #contact > img {
-    display: block;
-    max-width: 50%;
-    height: 300px;
-    object-fit: cover;
-  }
-
   #contact > div {
     max-width: 60%;
   }
