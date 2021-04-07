@@ -1,0 +1,50 @@
+@media only screen and (min-width: 35rem) {
+  /*----------- HEADER --------------*/
+  header {
+    padding: 0.35rem 1rem;
+  }
+
+  #menuBtn,
+  #closeBtn {
+    display: none;
+  }
+
+  #menu {
+    position: static;
+    width: auto;
+    background-color: transparent;
+    color: #ddd;
+    z-index: unset;
+  }
+
+  #menu ul {
+    padding: 0;
+    display: flex;
+  }
+
+  #menu ul li {
+    margin-right: 1rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  /*----------- FOOTER --------------*/
+  footer .top {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  footer .top > div {
+    min-width: 18rem;
+    max-width: 18rem;
+    margin-right: 2rem;
+  }
+
+  footer .top > div:first-child {
+    margin-bottom: 2rem;
+  }
+
+  footer .top > div:not(:first-child) {
+    margin-top: 0;
+  }
+} /* end of media query */
