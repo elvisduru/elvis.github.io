@@ -124,9 +124,6 @@ header {
 }
 
 /*----------- MAIN --------------*/
-main {
-  padding: 1rem 2%;
-}
 
 main h1 {
   font-size: 1.5rem;
@@ -190,4 +187,71 @@ footer .copyright {
   background-color: #35363d;
   padding: 1rem;
   color: white;
+}
+
+/*----------- MAIN --------------*/
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: calc(100vh - 120px);
+  padding: 1rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+#hero h1 {
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.17);
+}
+
+#hero a {
+  color: white;
+  background-color: #0074c4;
+  padding: 4% 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top: 2rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.27);
+}
+
+/* Current Weather */
+#currentWeather {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0.75rem 1.5rem;
+  background-color: #212121;
+  color: white;
+}
+
+#currentWeather p,
+h4 {
+  margin: 5px 0;
+}
+
+#currentWeather :first-child {
+  grid-column: 1 / -1;
+  margin-bottom: 10px;
+}
+
+/* Weather Forecast */
+#forecast {
+  text-align: center;
+}
+
+#forecast hr {
+  width: 150px;
+  border: 1px solid #24252a;
 }
