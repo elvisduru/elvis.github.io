@@ -47,4 +47,14 @@
   footer .top > div:not(:first-child) {
     margin-top: 0;
   }
+
+  /*----------- MAIN --------------*/
+  #hero a {
+    padding: 1.5% 3rem;
+    border-radius: 50px;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem;
+  }
 } /* end of media query */

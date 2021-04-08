@@ -4,8 +4,7 @@
   main,
   footer {
     /* max-width: 64rem; */
-    padding-left: 10%;
-    padding-right: 10%;
+    /* padding-left: 10%;
+    padding-right: 10%; */
   }
-
 } /* end of media query */
