@@ -57,4 +57,34 @@
   #hero h1 {
     font-size: 2.5rem;
   }
+
+  /* Current Weather */
+  #currentWeather {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  #currentWeather :first-child {
+    grid-column: 1 / 2;
+  }
+
+  /* Forecast */
+  .forecast-box {
+    gap: 80px;
+  }
+
+  /* Companies */
+  .companies > div {
+    width: 150px;
+    height: 150px;
+    margin: 0 2rem;
+  }
+
+  /* Why Join Us */
+  #joinUs > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 0 2rem;
+    align-items: center;
+  }
 } /* end of media query */

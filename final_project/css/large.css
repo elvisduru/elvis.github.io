@@ -1,10 +1,20 @@
 /* 64em is also 1028px (if basefont is 16px) */
 @media only screen and (min-width: 64rem) {
-  header,
-  main,
-  footer {
-    /* max-width: 64rem; */
-    /* padding-left: 10%;
-    padding-right: 10%; */
+  /* Current Weather */
+  #currentWeather {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  /* Forecast */
+  .forecast-box {
+    gap: 100px;
+  }
+
+  /* Companies */
+  .companies > div {
+    width: 200px;
+    height: 200px;
+    margin: 0 3rem;
   }
 } /* end of media query */
