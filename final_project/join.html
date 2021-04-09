@@ -65,6 +65,100 @@
       </picture>
       <h1>Join Us Today!</h1>
     </div>
+    <section id="contact">
+      <h2>Please Fill the form below</h2>
+      <div>
+        <form action="thanks.html">
+          <fieldset>
+            <legend>Your Information</legend>
+            <label class="top">
+              First name
+              <input type="text" name="fullname" required />
+            </label>
+            <label class="top">
+              Last name
+              <input type="text" name="fullname" required />
+            </label>
+            <label class="top">
+              Title
+              <input type="text" name="title" />
+            </label>
+            <label class="top">
+              Email
+              <input type="email" name="email" placeholder="username@domain.com" required />
+            </label>
+            <label class="top">
+              Phone number
+              <input type="tel" name="phone" />
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Business Information</legend>
+            <label class="top">
+              Business name
+              <input type="text" name="businessname" required />
+            </label>
+            <label class="top">
+              Business address
+              <input type="text" name="address" />
+            </label>
+            <label class="top">
+              Business website
+              <input type="url" name="website" placeholder="https://" />
+            </label>
+            <label class="top">
+              Business description
+              <textarea name="description"></textarea>
+            </label>
+            <label class="top">
+              Membership level *
+              <select name="stormRegion">
+                <option selected disabled value="">Select Level ...</option>
+                <option value="non-profit">Non-profit ($100)</option>
+                <option value="bronze">Bronze ($200)</option>
+                <option value="silver">Silver ($400)</option>
+                <option value="gold">Gold ($1000)</option>
+              </select>
+            </label>
+          </fieldset>
+          <input class="submitBtn" type="submit" value="Add My Business" />
+        </form>
+        <div id="benefits">
+          <h4>Membership Level Benefits *</h4>
+          <div class="info">
+            <div>
+              <h5>Non-profit</h5>
+              <ul>
+                <li>Directory Listing</li>
+                <li>Business Trainings</li>
+                <li>Sponsorships</li>
+              </ul>
+              <h5>Bronze</h5>
+              <ul>
+                <li>Directory Listing</li>
+                <li>Business Trainings</li>
+              </ul>
+              <h5>Silver</h5>
+              <ul>
+                <li>Directory Listing</li>
+                <li>Business Trainings</li>
+                <li>Sponsorships</li>
+                <li>Social Media Posts</li>
+              </ul>
+              <h5>Gold</h5>
+              <ul>
+                <li>Directory Listing</li>
+                <li>Business Trainings</li>
+                <li>Sponsorships</li>
+                <li>Social Media Posts</li>
+                <li>Media Publication & Advertisements</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
 
   <footer>
@@ -95,7 +189,8 @@
       </div>
     </div>
     <div class="copyright">
-      &copy; 2021
+      &copy; 2021 | Images by Unsplash and by <a href="https://commons.wikimedia.org/w/index.php?curid=97342152">Eukoha
+        - Own work, CC BY-SA 4.0</a>
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>

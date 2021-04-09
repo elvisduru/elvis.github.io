@@ -17,4 +17,8 @@
     height: 200px;
     margin: 0 3rem;
   }
+
+  #contact > div {
+    grid-template-columns: 1fr 1fr;
+  }
 } /* end of media query */

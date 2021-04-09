@@ -96,4 +96,16 @@
   #events > div {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /*------------  FORM  -------------*/
+  form fieldset,
+  #benefits {
+    max-width: 80%;
+  }
+
+  form label.top input,
+  form label.top select,
+  form label.top textarea {
+    max-width: 100%;
+  }
 } /* end of media query */
