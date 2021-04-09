@@ -31,13 +31,17 @@ fetch(requestUrl)
     const dailyForecast = jsonObject.daily.slice(0, 3);
     const alerts = jsonObject.alerts;
 
-    document.getElementById("desc").textContent =
-      currentWeather.weather[0].description;
-    document.getElementById("temp").textContent = currentWeather.temp + "\xB0F";
+    // Update only Homepage
+    if (location.pathname.includes("index")) {
+      document.getElementById("desc").textContent =
+        currentWeather.weather[0].description;
+      document.getElementById("temp").textContent =
+        currentWeather.temp + "\xB0F";
 
-    document.getElementById("humidity").textContent = currentWeather.humidity;
-    document.getElementById("windSpeed").textContent =
-      currentWeather.wind_speed;
+      document.getElementById("humidity").textContent = currentWeather.humidity;
+      document.getElementById("windSpeed").textContent =
+        currentWeather.wind_speed;
+    }
 
     // Check for alerts
     if (alerts) {
