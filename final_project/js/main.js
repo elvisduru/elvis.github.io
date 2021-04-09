@@ -35,6 +35,8 @@ function handleAlerts() {
   }
 }
 
+handleAlerts();
+
 closeBannerBtn.addEventListener("click", function () {
   banner.classList.add("hide");
 });

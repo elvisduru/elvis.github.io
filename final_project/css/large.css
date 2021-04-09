@@ -21,4 +21,19 @@
   #contact > div {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* ------------ Directory Page ------------ */
+
+  #directory {
+    padding-left: 4rem;
+    padding-right: 17rem;
+  }
+
+  #businesses .card > div div img {
+    max-width: 10rem;
+  }
+
+  #businesses.grid .card > div div img {
+    max-width: 7rem;
+  }
 } /* end of media query */

@@ -12,7 +12,7 @@
     },
     {
       "name": "MiraFoods",
-      "logo": "mirafoods.png",
+      "logo": "mirafoods.jpg",
       "address": "2 Idona, Ijebu-Imushin, Ogun state",
       "phone": "(234) 807-3456-0909",
       "email": "info@mirafoods.com",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Ahmed Intergated Farms",
-      "logo": "ahmed.png",
+      "logo": "ahmed.jpg",
       "address": "12 Idokunusi Street, Ijebu-Imushin, Ogun state",
       "phone": "(234) 855-1211-0989",
       "email": "info@ahmedfarms.com",
@@ -36,13 +36,13 @@
       "address": "2 Idokunusi Street, Ijebu-Imushin, Ogun state",
       "phone": "(234) 855-1121-3244",
       "email": "info@auctionmall.com",
-      "website": "#",
+      "website": "https://auctionmall.com",
       "level": "Silver",
       "description": "We have one all-consuming passion here at Auto Auction Mall: to help people save money and live better. We do this by helping regular people access exclusive U.S. dealer auctions."
     },
     {
       "name": "RealHomes Limited",
-      "logo": "homes.png",
+      "logo": "homes.jpg",
       "address": "27 Idona, Ijebu-Imushin, Ogun state",
       "phone": "(234) 807-2222-0301",
       "email": "info@realhomes.com",
@@ -52,7 +52,7 @@
     },
     {
       "name": "BluePower Overseas Ltd",
-      "logo": "bluepower.png",
+      "logo": "bluepower.jpg",
       "address": "27 Idona, Ijebu-Imushin, Ogun state",
       "phone": "(234) 701-1211-5555",
       "email": "info@bluepoweroverseas.com",
