@@ -8,6 +8,10 @@
     padding: 2rem 5rem;
   }
 
+  #summary > h1 {
+    margin-left: 5rem;
+  }
+
   #menuBtn,
   #closeBtn {
     display: none;

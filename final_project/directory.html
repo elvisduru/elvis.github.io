@@ -56,6 +56,19 @@
 
   <!-- Content -->
   <main>
+    <div id="summary">
+      <picture>
+        <source media="(max-width: 500px)" srcset="images/hero.jpg" />
+        <source media="(max-width: 800px)" srcset="images/hero.jpg" />
+        <source media="(max-width: 1024px)" srcset="images/hero.jpg" />
+        <img src="images/hero.jpg" alt="Franklin" />
+      </picture>
+      <h1>Business Directory</h1>
+    </div>
+    <section>
+      <h2>List of Businesses Registered in Idona Chamber of Commerce</h2>
+      <div id="directory"></div>
+    </section>
   </main>
 
   <footer>
@@ -86,11 +99,13 @@
       </div>
     </div>
     <div class="copyright">
-      &copy; 2021
+      &copy; 2021 | Images by Unsplash and by <a href="https://commons.wikimedia.org/w/index.php?curid=97342152">Eukoha
+        - Own work, CC BY-SA 4.0</a>
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/directory.js"></script>
 </body>
 
 </html>
