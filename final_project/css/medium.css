@@ -4,6 +4,10 @@
     padding: 0.35rem 1rem;
   }
 
+  section {
+    padding: 2rem 5rem;
+  }
+
   #menuBtn,
   #closeBtn {
     display: none;
@@ -61,6 +65,7 @@
   /* Current Weather */
   #currentWeather {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.5rem;
   }
 
   #currentWeather :first-child {
@@ -84,7 +89,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding: 0 2rem;
     align-items: center;
+  }
+
+  /* Events */
+  #events > div {
+    grid-template-columns: repeat(3, 1fr);
   }
 } /* end of media query */

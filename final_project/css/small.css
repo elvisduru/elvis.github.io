@@ -335,6 +335,11 @@ h4 {
 }
 
 /* Events */
+#events > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 
 .hide {
   display: none;
