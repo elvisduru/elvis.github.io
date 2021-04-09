@@ -341,6 +341,94 @@ h4 {
   gap: 1rem;
 }
 
+/* ----------------IDONA----------------- */
+
+/* Summary */
+/* Weather summary */
+
+#summary {
+  position: relative;
+}
+
+#summary > picture img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+#summary > div {
+  border: 1px solid rgba(204, 204, 204, 0.241);
+  border-radius: 4px;
+  background-color: #00263a9d;
+  backdrop-filter: blur(2px);
+  padding: 2%;
+  color: white;
+  width: 40ex;
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  font-size: 0.8rem;
+}
+
+/* About */
+#about {
+  line-height: 1.5;
+}
+
+#about h2 {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+/* Responsive images */
+img[data-src] {
+  filter: blur(0.2em);
+}
+
+img {
+  max-width: 100%;
+  filter: blur(0em);
+  transition: filter 0.5s;
+}
+
+/* Gallery */
+#container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+#container figure {
+  margin: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+#container figure:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#container figure img {
+  min-height: 200px;
+}
+
+#container figure figcaption {
+  padding: 5px;
+  font-size: 0.75em;
+}
+
+/* Join Us Page */
+
+#summary > h1 {
+  position: absolute;
+  top: 40%;
+  margin-left: 2rem;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 3px 9px rgba(0, 0, 0, 0.54);
+}
+
 .hide {
   display: none;
 }
