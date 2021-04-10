@@ -616,6 +616,7 @@ iframe {
 
 #contact-info img {
   max-width: 1.4rem;
+  margin-right: 0.75rem;
 }
 
 #contact-info p {
@@ -636,7 +637,12 @@ iframe {
 }
 
 #contact-info .social li:not(:last-child) {
-  margin-right: 2rem;
+  margin-right: 1rem;
+}
+
+#team > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .hide {
