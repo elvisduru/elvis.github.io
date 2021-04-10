@@ -607,6 +607,38 @@ form label.top input:required:valid {
   cursor: pointer;
 }
 
+/* ------------ CONTACT PAGE -------------- */
+
+iframe {
+  width: 100vw;
+  min-height: 240px;
+}
+
+#contact-info img {
+  max-width: 1.4rem;
+}
+
+#contact-info p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+#contact-info h4 {
+  margin-top: 1rem;
+}
+
+#contact-info .social {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+#contact-info .social li:not(:last-child) {
+  margin-right: 2rem;
+}
+
 .hide {
   display: none;
 }

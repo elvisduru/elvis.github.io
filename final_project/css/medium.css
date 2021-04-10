@@ -103,7 +103,8 @@
 
   /*------------  FORM  -------------*/
   form fieldset,
-  #benefits {
+  #benefits,
+  #contact-info {
     max-width: 80%;
   }
 
@@ -130,5 +131,15 @@
   #businesses.grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
+  }
+
+  /* ------------ CONTACT US Page ------------ */
+
+  iframe {
+    min-height: 320px;
+  }
+
+  #contact-info {
+    margin-top: 2rem;
   }
 } /* end of media query */
