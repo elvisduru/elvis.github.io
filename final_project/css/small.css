@@ -181,6 +181,10 @@ footer > .top {
   padding: 1.5rem;
 }
 
+footer > .top p {
+  line-height: 1.5;
+}
+
 footer > .top div:not(:first-child) {
   font-size: 1.2rem;
   margin-top: 1.3rem;
@@ -535,6 +539,7 @@ form label.top input:required:valid {
 #directory {
   padding: 0;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 #businesses {
@@ -643,6 +648,16 @@ iframe {
 #team > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Copyright */
+
+.copyright {
+  line-height: 1.5;
+}
+
+.copyright p {
+  margin: 0.5rem 0;
 }
 
 .hide {

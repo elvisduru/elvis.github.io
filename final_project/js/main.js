@@ -40,3 +40,11 @@ handleAlerts();
 closeBannerBtn.addEventListener("click", function () {
   banner.classList.add("hide");
 });
+
+// Last Modified Date
+const currentDateSpan = document.getElementById("currentDate");
+
+const now = new Date();
+currentDateSpan.textContent = new Intl.DateTimeFormat("en-GB", {
+  dateStyle: "full",
+}).format(now);
