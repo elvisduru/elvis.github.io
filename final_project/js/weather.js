@@ -10,7 +10,10 @@ fetch(requestUrl)
     alerts = jsonObject.alerts;
 
     // Update only Homepage
-    if (location.pathname.includes("index")) {
+    if (
+      location.pathname.includes("index") ||
+      location.pathname.endsWith("final_project/")
+    ) {
       document.getElementById("desc").textContent =
         currentWeather.weather[0].description;
       document.getElementById("temp").textContent =
